@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Tracking</title>
+	<!--FONTAWESOME-->
+	<script src="https://kit.fontawesome.com/62e84d0f4f.js" crossorigin="anonymous"></script>
+	<!--FONTS-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+	<!--BOOTSTRAP-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!--ESTILOS GENERALES-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<section class="tracking-section">
+		<div class="container">
+			<div class="head-tracking">
+				<a href="#" class="head-tracking__logo">
+					<img src="images/logo.svg">
+				</a>
+				<h1>Seguimiento del pedido</h1>
+				<p>Ingresa el número de tu orden para ver el estado de tu pedido</p>
+			</div>
+			<form action="#">
+				<div class="input-tracking">
+					<div class="input-tracking__txt">
+						<label>Nº de orden</label>
+						<input type="text" placeholder="Ingresa aquí tu número de orden">
+					</div>
+					<button>Buscar</button>
+				</div>
+			</form>
+			<div class="tracking-info active-delivery paid">
+				<!-- --------------- Clases despacho a domicilio ---------------
+				class="tracking-info active-delivery" muestra el contenedor de la información del pedido.
+				class="tracking-info active-delivery canceled": pedido cancelado
+				class="tracking-info active-delivery processing": procesando pedido
+				class="tracking-info active-delivery paid": pago aceptado
+				class="tracking-info active-delivery preparing": preparando el pedido
+				class="tracking-info active-delivery sent": pedido enviado
+				class="tracking-info active-delivery delivered": pedido entregado
+				class="tracking-info active-delivery return": pedido devuelto
+				 ------------------------------------------ -->
+				 <!-- --------------- Clases retiro en tienda ---------------
+				class="tracking-info active-store" muestra el contenedor de la información del pedido.
+				class="tracking-info active-store canceled" pedido cancelado
+				class="tracking-info active-store processing" procesando pedido
+				class="tracking-info active-store paid" pago aceptado
+				class="tracking-info active-store preparing" preparando el pedido
+				class="tracking-info active-store delivered" pedido listo para retirar
+				class="tracking-info active-store delivered-ok" pedido retirado
+				class="tracking-info active-store return" pedido devuelto
+				 ------------------------------------------ -->
+				<div class="tracking-info__list">
+					<ul>
+						<li>Nº del pedido:</li>
+						<li>#123456789</li>
+					</ul>
+					<ul>
+						<li>Estado del pedido:</li>
+						<li class="status-info">
+							<span>Nombre del estado del pedido</span>
+							<i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="Aquí va una breve explicación del estado del pedido"></i>
+						</li>
+					</ul>
+					<ul>
+						<li>Fecha estimada de entrega:</li>
+						<li>13/07/2020</li>
+					</ul>
+				</div>
+				<div class="tracking-info__status">
+					<div class="status-col status-col--canceled">
+						<div class="status-col__circle"><i class="fas fa-times"></i></div>
+						<h3>Pedido cancelado</h3>
+					</div>
+					<div class="status-col status-col--first-paid">
+						<div class="status-col__circle"><i class="far fa-credit-card"></i></div>
+						<h3>Pago aceptado</h3>
+					</div>
+					<div class="status-col status-col--first">
+						<div class="status-col__circle"><i class="fas fa-truck-loading"></i></div>
+						<h3>Preparando el pedido</h3>
+					</div>
+					<div class="status-col status-col--second">
+						<div class="status-col__circle"><i class="fas fa-truck"></i></div>
+						<h3>Tu pedido va en camino</h3>
+					</div>
+					<div class="status-col status-col--third">
+						<div class="status-col__circle"><i class="fas fa-home"></i></div>
+						<h3>Tu pedido ha sido entregado</h3>
+					</div>
+					<div class="status-col status-col--first-store-paid">
+						<div class="status-col__circle"><i class="far fa-credit-card"></i></div>
+						<h3>Pago aceptado</h3>
+					</div>
+					<div class="status-col status-col--first-store">
+						<div class="status-col__circle"><i class="fas fa-box-open"></i></div>
+						<h3>Preparando el pedido</h3>
+					</div>
+					<div class="status-col status-col--second-store">
+						<div class="status-col__circle"><i class="fas fa-store"></i></div>
+						<h3>Pedido listo para ser retirado</h3>
+					</div>
+					<div class="status-col status-col--third-store">
+						<div class="status-col__circle"><i class="fas fa-check-circle"></i></div>
+						<h3>Tu pedido ya fue retirado</h3>
+					</div>
+					<div class="status-col status-col--return">
+						<div class="status-col__circle"><i class="fas fa-exchange-alt"></i></div>
+						<h3>Pedio devuelto</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
